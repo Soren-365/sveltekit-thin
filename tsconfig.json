@@ -1,0 +1,60 @@
+{
+	"extends": "./.svelte-kit/tsconfig.json",
+	"compilerOptions": {
+		"allowUnreachableCode": false,
+		"exactOptionalPropertyTypes": true,
+		"noImplicitAny": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"lib": [
+			"ESNext",
+			"DOM",
+			"DOM.Iterable"
+		],
+		"moduleResolution": "node",
+		"module": "ESNext",
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "es2020",
+		"paths": {
+			"$components": [
+				"src/lib/components"
+			],
+			"$stores": [
+				"src/lib/stores"
+			],
+			"$lib": [
+				"src/lib"
+			],
+			"$lib/*": [
+				"src/lib/*"
+			],
+			"$types": [
+				"src/types"
+			],
+			"$files": [
+				"static"
+			]
+		}
+	},
+	"include": [
+		"src/**/*",
+		"src/node_modules"
+	],
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts",
+		"src/lib/components/data.js",
+		"__sapper__/*",
+		"public/*"
+	]
+}
